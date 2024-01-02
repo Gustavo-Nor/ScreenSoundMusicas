@@ -7,7 +7,7 @@ public class ConsultaChatGPT {
 
     static GetKeyFromProperties getKeyFromProperties = new GetKeyFromProperties();
 
-    public String pesquisarSobre(String texto) {
+    public static String pesquisarSobre(String texto) {
 
         String apiKey = getKeyFromProperties.obterKeyValue("CHATGPT_APIKEY");
 

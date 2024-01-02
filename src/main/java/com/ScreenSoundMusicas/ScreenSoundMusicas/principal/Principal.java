@@ -12,8 +12,6 @@ public class Principal {
 
     private Scanner leitura = new Scanner(System.in);
 
-    private ConsultaChatGPT pesquisa = new ConsultaChatGPT();
-
     private ArtistaRepository repositorio;
     public Principal(ArtistaRepository repositorio) {
         this.repositorio = repositorio;
@@ -123,6 +121,6 @@ public class Principal {
     private void pesquisarSobreUmArtista() {
         System.out.println("Sobre qual artista voce deseja pesquisar?");
         var artista = leitura.nextLine();
-        System.out.println(pesquisa.pesquisarSobre(artista));
+        System.out.println(ConsultaChatGPT.pesquisarSobre(artista).trim());
     }
 }
